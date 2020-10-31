@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/pablovara',
   siteMetadata: {
     title: 'Pablo Vara',
     description: 'Pablo Vara Artist Portfolio',
