@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Pablo Vara',
     description: 'Pablo Vara Artist Portfolio',
-    author: '@jlopezcur',
+    author: '@kloder-art',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

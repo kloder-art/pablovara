@@ -3,7 +3,7 @@
   "private": true,
   "description": "Pablo Vara Artist Portfolio",
   "version": "0.1.0",
-  "author": "Javier López Úbeda <jlopezcur@gmail.com>",
+  "author": "@kloder-art",
   "dependencies": {
     "gatsby": "^2.24.23",
     "gatsby-image": "^2.4.14",
