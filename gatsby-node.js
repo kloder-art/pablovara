@@ -11,7 +11,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 // Create projects pages
 const createProjectPages = async (createPage, edges) => {
-  const projectTemplate = path.resolve('src/templates/project.js');
+  const projectTemplate = path.resolve('src/templates/Project.jsx');
   edges.forEach(
     ({
       node: {
