@@ -44,7 +44,7 @@ p {
 .gatsby-image-wrapper,
 img {
   border-style: none;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 blockquote {
@@ -55,13 +55,14 @@ blockquote {
 }
 
 iframe {
-  margin: 2rem 0;
+  margin-bottom: 2.8rem;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
   padding-left: 0.8rem;
 }
 
-iframe {
-  max-width: 572px;
-}

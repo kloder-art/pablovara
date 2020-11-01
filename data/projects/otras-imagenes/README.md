@@ -17,17 +17,19 @@ artwork:
   - type: image
     src: poliptico.jpg
     text: Hch 9, 8-9. Fundación Antonio Gala. Córdoba 2009
-  - type: image
+  - type: gif
     src: auto-de-fe.gif
+    text: Auto de fe - (Incensario y candelabro) 2016
   - type: image
     src: calcetines-negros.jpg
-  - type: image
-    src: cada-arbol-contine-nidos-para-sus-pajarillos.jpg
+    text: Calcetines negros 2006
+  - type: gif
+    src: cada-arbol-contine-nidos-para-sus-pajarillos.gif
     text: Cada árbol contine nidos para sus pajarillos. 2007
   - type: image
     src: cabeza-doliente-del-hombre-contemporaneo.jpg
     text: La cabeza doliente del hombre contemporáneo 2009
-  - type: image
+  - type: gif
     src: dalias.gif
     text: Cielo de Dalías. 2015
   - type: image

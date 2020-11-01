@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Artwork from '../components/Artwork';
 
 const StyledProjectPage = styled.article``;
 
@@ -38,8 +39,6 @@ const StyledText = styled.div`
   }
 `;
 
-const StyledImage = styled.div``;
-
 const ProjectPage = ({
   data: {
     markdownRemark: { frontmatter, html },
@@ -54,17 +53,7 @@ const ProjectPage = ({
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </StyledText>
         {frontmatter.artwork &&
-          frontmatter.artwork.map((x, idx) => (
-            <StyledImage key={idx}>
-              <img
-                src={
-                  x.src && x.src.childImageSharp
-                    ? x.src.childImageSharp.original.src
-                    : null
-                }
-              />
-            </StyledImage>
-          ))}
+          frontmatter.artwork.map((x, idx) => <Artwork {...x} key={idx} />)}
         <div>&nbsp;</div>
       </StyledLayout>
     </StyledProjectPage>
@@ -78,7 +67,7 @@ ProjectPage.propTypes = {
         title: PropTypes.string,
         artwork: PropTypes.arrayOf(
           PropTypes.shape({
-            type: PropTypes.oneOf(['image', 'youtube']),
+            type: PropTypes.oneOf(['image', 'youtube', 'gif']),
             text: PropTypes.string,
             src: PropTypes.object,
             id: PropTypes.string,
@@ -106,6 +95,7 @@ export const pageQuery = graphql`
           text
           id
           src {
+            publicURL
             childImageSharp {
               original {
                 src
