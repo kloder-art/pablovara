@@ -9,8 +9,9 @@ const StyledFooter = styled.div`
 
 const Footer = () => (
   <StyledFooter>
-    Contenido y fotografía por <Link to={'/biocv'}>Pablo Vara</Link> ©{' '}
-    {new Date().getFullYear()}
+    Contenido y fotografía por
+    <br />
+    <Link to={'/biocv'}>Pablo Vara</Link> © {new Date().getFullYear()}
   </StyledFooter>
 );
 
