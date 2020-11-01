@@ -5,13 +5,14 @@ title: Bio/CV
 
 ### Formación Académica
 
-- Licenciado en Bellas Artes en la especialidad de Imagen. Universidad de
-  Barcelona.
+- Licenciado en Bellas Artes en la especialidad de Imagen. [Universidad de
+  Barcelona](https://www.ub.edu/web/portal/es/).
 - Máster de Profesorado para Enseñanza Secundaria, Bachillerato y Formación
-  Profesional. Universidad de Almería
-- “Especular con la fotografía”. May 2009. Conferencia en la Universidad de
-  Almería. Simposio sobre Arte y Creatividad.
-- Beca Erasmus en la Hochschule für Grafik und Buchkunst de Leipzig (Alemania)
+  Profesional. [Universidad de Almería](https://www.ual.es/)
+- “Especular con la fotografía”. May 2009. Conferencia en la [Universidad de
+  Almería](https://www.ual.es/). Simposio sobre Arte y Creatividad.
+- Beca Erasmus en la [Hochschule für Grafik und
+  Buchkunst](http://www.hgb-leipzig.de/) de Leipzig (Alemania)
 
 ### Exposiciones
 
