@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
+import Menu from './Menu';
 import Contact from './Contact';
+import Footer from './Footer';
 
 const StyledSidebar = styled.div`
   position: fixed;
@@ -39,64 +41,21 @@ const StyledSidebar = styled.div`
       }
     }
   }
+
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-rows: 1rem auto auto 3rem;
 `;
 
 const Sidebar = ({ title }) => {
-  const { projects, pages } = useStaticQuery(graphql`
-    query {
-      projects: allMarkdownRemark(
-        filter: { fileInfo: { sourceInstanceName: { eq: "projects" } } }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              slug
-            }
-          }
-        }
-      }
-      pages: allMarkdownRemark(
-        filter: { fileInfo: { sourceInstanceName: { eq: "pages" } } }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              slug
-            }
-          }
-        }
-      }
-    }
-  `);
   return (
     <StyledSidebar>
       <h1>
         <Link to={'/'}>{title}</Link>
       </h1>
-      <nav>
-        <h2>Proyectos</h2>
-        <ul>
-          {projects.edges.map(({ node: { frontmatter: { title, slug } } }) => (
-            <li key={slug}>
-              <Link to={`/${slug}`} activeClassName={'active'}>
-                {title}
-              </Link>
-            </li>
-          ))}
-          <li className={'separator'}></li>
-          {pages.edges.map(({ node: { frontmatter: { title, slug } } }) => (
-            <li key={slug}>
-              <Link to={`/${slug}`}>{title}</Link>
-            </li>
-          ))}
-          <li className={'separator'}></li>
-          <li>
-            <Contact />
-          </li>
-        </ul>
-      </nav>
+      <Menu />
+      <Contact />
+      <Footer />
     </StyledSidebar>
   );
 };

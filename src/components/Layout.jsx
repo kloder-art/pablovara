@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import Sidebar from './Sidebar';
-import Footer from './Footer';
 
 import '../styles/global.scss';
 
@@ -33,7 +32,6 @@ const Layout = ({ children }) => {
     <>
       <Sidebar title={data.site.siteMetadata.title} />
       <StyledContent>{children}</StyledContent>
-      <Footer />
     </>
   );
 };

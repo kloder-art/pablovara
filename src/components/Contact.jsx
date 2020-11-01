@@ -3,6 +3,7 @@ import { FiInstagram, FiMail, FiYoutube } from 'react-icons/fi';
 import styled from 'styled-components';
 
 const StyledContact = styled.ul`
+  align-self: end;
   list-sytile: none;
   li {
     a {
@@ -16,7 +17,11 @@ const StyledContact = styled.ul`
 const Contact = () => (
   <StyledContact>
     <li>
-      <a href={'mailto:pablovarafoto@gmail.com'}>
+      <a
+        href={'mailto:pablovarafoto@gmail.com'}
+        target={'_blank'}
+        rel={'noreferrer noopener'}
+      >
         <FiMail />
         pablovarafoto@gmail.com
       </a>
@@ -28,7 +33,7 @@ const Contact = () => (
         rel={'noreferrer noopener'}
       >
         <FiInstagram />
-        pablovarafoto
+        Instagram
       </a>
     </li>
     <li>
@@ -38,7 +43,7 @@ const Contact = () => (
         rel={'noreferrer noopener'}
       >
         <FiYoutube />
-        pablovarafoto
+        Youtube
       </a>
     </li>
   </StyledContact>
