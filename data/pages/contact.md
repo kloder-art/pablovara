@@ -1,4 +1,0 @@
----
-slug: contacto
-title: Contacto
----

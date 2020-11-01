@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 
+import Contact from './Contact';
+
 const StyledSidebar = styled.div`
   position: fixed;
   top: 0;
@@ -89,6 +91,10 @@ const Sidebar = ({ title }) => {
               <Link to={`/${slug}`}>{title}</Link>
             </li>
           ))}
+          <li className={'separator'}></li>
+          <li>
+            <Contact />
+          </li>
         </ul>
       </nav>
     </StyledSidebar>
