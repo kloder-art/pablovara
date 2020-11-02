@@ -15,10 +15,21 @@ const StyledSidebar = styled.div`
   bottom: 0;
   padding: 40px 29px 0;
   background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-rows: 1rem auto auto 3rem;
 
   @media (max-width: 980px) {
     & {
       display: none;
+      ${({ active }) => active && `display: grid;`}
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.95);
+      a,
+      h2 {
+        color: white;
+      }
     }
   }
 
@@ -41,15 +52,11 @@ const StyledSidebar = styled.div`
       }
     }
   }
-
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-rows: 1rem auto auto 3rem;
 `;
 
-const Sidebar = ({ title }) => {
+const Sidebar = ({ title, onMouseUp, active }) => {
   return (
-    <StyledSidebar>
+    <StyledSidebar onMouseUp={onMouseUp} active={active}>
       <h1>
         <Link to={'/'}>{title}</Link>
       </h1>

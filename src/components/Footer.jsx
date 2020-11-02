@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 
 const StyledFooter = styled.div`
   color: #999;
-  background-color: rgba(255, 255, 255, 0.8);
 `;
 
 const Footer = () => (

@@ -2,7 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledGif = styled.div``;
+const StyledGif = styled.div`
+  cursor: pointer;
+  img {
+    max-height: 80vh;
+  }
+
+  @media (max-width: 980px) {
+    & {
+      align-self: center;
+      justify-self: center;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+`;
 
 export const Gif = ({ src, text }) => (
   <StyledGif>

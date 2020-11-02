@@ -8,7 +8,15 @@ import SEO from '../components/SEO';
 import Artwork from '../components/Artwork';
 import Text from '../components/Text';
 
-const StyledProjectPage = styled.article``;
+const StyledProjectPage = styled.article`
+  display: inline-block;
+  padding-right: 1rem;
+  @media (max-width: 980px) {
+    & {
+      padding-right: 0;
+    }
+  }
+`;
 
 const StyledLayout = styled.div`
   display: grid;
@@ -48,7 +56,6 @@ const ProjectPage = ({
             frontmatter.artwork.map((x, idx) => (
               <Artwork {...x} key={idx} onClick={moveStrip} />
             ))}
-          <div>&nbsp;</div>
         </StyledLayout>
       </StyledProjectPage>
     </Layout>
