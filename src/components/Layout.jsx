@@ -10,7 +10,7 @@ import '../styles/global.scss';
 const StyledContent = styled.div`
   margin: 40px 20px 20px 270px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 980px) {
     & {
       margin: 40px 20px;
     }

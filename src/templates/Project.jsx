@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Artwork from '../components/Artwork';
+import Text from '../components/Text';
 
 const StyledProjectPage = styled.article``;
 
@@ -15,26 +16,9 @@ const StyledLayout = styled.div`
   grid-gap: 2rem;
   grid-auto-flow: column;
 
-  @media (max-width: 600px) {
+  @media (max-width: 980px) {
     & {
       grid-auto-flow: row;
-    }
-  }
-`;
-
-const StyledText = styled.div`
-  white-space: normal;
-  width: 33vw;
-  height: 89vh;
-
-  overflow: hidden;
-  overflow-y: auto;
-
-  @media (max-width: 600px) {
-    & {
-      padding-bottom: 4rem;
-      min-width: inherit;
-      height: auto;
     }
   }
 `;
@@ -43,22 +27,33 @@ const ProjectPage = ({
   data: {
     markdownRemark: { frontmatter, html },
   },
-}) => (
-  <Layout>
-    <SEO title={frontmatter.title} />
-    <StyledProjectPage>
-      <StyledLayout>
-        <StyledText>
-          <h2>{frontmatter.title}</h2>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </StyledText>
-        {frontmatter.artwork &&
-          frontmatter.artwork.map((x, idx) => <Artwork {...x} key={idx} />)}
-        <div>&nbsp;</div>
-      </StyledLayout>
-    </StyledProjectPage>
-  </Layout>
-);
+}) => {
+  const ref = useRef();
+  const moveStrip = (ev) => {
+    const d = ev.currentTarget.getBoundingClientRect() - 250;
+    ref.current.scrollLeft = ref.current.scrollLeft - d;
+    console.log(
+      ref.current.scrollLeft,
+      ev.currentTarget.getBoundingClientRect()
+    );
+    // ref.current
+  };
+  return (
+    <Layout>
+      <SEO title={frontmatter.title} />
+      <StyledProjectPage ref={ref}>
+        <StyledLayout>
+          <Text title={frontmatter.title} html={html} />
+          {frontmatter.artwork &&
+            frontmatter.artwork.map((x, idx) => (
+              <Artwork {...x} key={idx} onClick={moveStrip} />
+            ))}
+          <div>&nbsp;</div>
+        </StyledLayout>
+      </StyledProjectPage>
+    </Layout>
+  );
+};
 
 ProjectPage.propTypes = {
   data: PropTypes.shape({

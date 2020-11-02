@@ -16,7 +16,7 @@ const StyledSidebar = styled.div`
   padding: 40px 29px 0;
   background-color: rgba(255, 255, 255, 0.9);
 
-  @media (max-width: 600px) {
+  @media (max-width: 980px) {
     & {
       display: none;
     }
