@@ -30,7 +30,7 @@ artwork:
     src: avanti.jpg
   - type: image
     src: pompeya-contemplando-mosaico.jpg
-  - type: image
+  - type: gif
     src: novias-y-san-juan-de-letran.gif
   - type: image
     src: asomado-en-san-pablo.jpg
@@ -55,13 +55,17 @@ artwork:
   - type: image
     src: iglesia-con-videovigilancia.jpg
   - type: image
-    src: cristo-erejado.jpg
+    src: cristo-enrejado.jpg
   - type: image
     src: abemus-papam.jpg
   - type: image
     src: monja.jpg
+  - type: space
+    len: 500
   - type: image
     src: figura-metro.jpg
+  - type: space
+    len: 1000
 ---
 
 > «El hombre es por naturaleza un animal político» Aristóteles
