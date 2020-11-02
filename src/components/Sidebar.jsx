@@ -22,6 +22,7 @@ const StyledSidebar = styled.div`
 
   @media (max-width: 980px) {
     & {
+      padding: 1rem 1rem 0;
       display: none;
       ${({ active }) => active && `display: grid;`}
       width: 100vw;
