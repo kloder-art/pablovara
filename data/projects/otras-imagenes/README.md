@@ -8,7 +8,7 @@ artwork:
       Creación "Salamandria". Número dedicado al círculo 2008
   - type: image
     src: festival-del-libro.jpg
-    text: Cartel del festival del Libro y la lectura de Almería. Lilec 2007
+    text: Cartel del Festival del Libro y la lectura de Almería. Lilec 2007
   - type: image
     src: lazaro.jpg
     text: Primavera para Lázaro. 2009
@@ -44,9 +44,13 @@ artwork:
   - type: image
     src: irene-riendo.jpg
     text: Irene. 2016
+  - type: space
+    len: 500
   - type: image
     src: jazmines.jpg
     text: Jazmines
+  - type: space
+    len: 1000
   - type: image
     src: ana-torera.jpg
     text: Ana María Canteras. Pintora. Almería 2013
