@@ -19,7 +19,7 @@ const StyledImage = styled.div`
   }
 `;
 
-export const Image = ({ src, text, onClick }) => (
+const Image = ({ src, text, onClick }) => (
   <StyledImage onClick={onClick}>
     <img
       src={src && src.childImageSharp ? src.childImageSharp.original.src : null}
@@ -33,3 +33,5 @@ Image.propTypes = {
   text: PropTypes.string,
   onClick: PropTypes.func,
 };
+
+export default Image;

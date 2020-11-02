@@ -24,7 +24,7 @@ const StyledYoutube = styled.div`
   }
 `;
 
-export const Youtube = ({ id, text }) => (
+const Youtube = ({ id, text }) => (
   <StyledYoutube>
     <iframe
       allowFullScreen={true}
@@ -40,3 +40,5 @@ Youtube.propTypes = {
   id: PropTypes.string,
   text: PropTypes.string,
 };
+
+export default Youtube;

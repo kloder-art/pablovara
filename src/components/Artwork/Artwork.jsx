@@ -1,12 +1,6 @@
 import React from 'react';
 
-import * as types from './types';
-
-const typeMap = {
-  youtube: types.Youtube,
-  image: types.Image,
-  gif: types.Gif,
-};
+import typeMap from './types';
 
 const Artwork = ({ type, ...rest }) => {
   const Cmp = typeMap[type];

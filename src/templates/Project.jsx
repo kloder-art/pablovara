@@ -69,7 +69,7 @@ ProjectPage.propTypes = {
         title: PropTypes.string,
         artwork: PropTypes.arrayOf(
           PropTypes.shape({
-            type: PropTypes.oneOf(['image', 'youtube', 'gif']),
+            type: PropTypes.oneOf(['image', 'youtube', 'gif', 'space']),
             text: PropTypes.string,
             src: PropTypes.object,
             id: PropTypes.string,
@@ -96,6 +96,7 @@ export const pageQuery = graphql`
           type
           text
           id
+          len
           src {
             publicURL
             childImageSharp {
