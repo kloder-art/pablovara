@@ -1,6 +1,7 @@
 ---
 slug: breve-paseo-por-un-coma-profundo
 title: Breve paseo por un coma profundo
+order: 2
 artwork:
   - type: youtube
     id: Vs3zo7oa7BI

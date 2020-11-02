@@ -1,6 +1,7 @@
 ---
 slug: los-anatemas
 title: Los anatemas
+order: 1
 artwork:
   - type: image
     src: herido.jpg

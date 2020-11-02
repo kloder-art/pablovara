@@ -1,6 +1,7 @@
 ---
 slug: otras-imagenes
 title: Otras imagenes
+order: 3
 artwork:
   - type: image
     src: circulo-vicioso.jpg
