@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"G3S+":function(e,t,n){"use strict";n.r(t),n.d(t,"query",(function(){return o}));var a=n("q1tI"),r=n.n(a),l=n("L6Je"),u=n("hYuR"),o="864860772";t.default=function(e){var t=e.data;return r.a.createElement(l.a,null,r.a.createElement(u.a,{title:"Bio/CV"}),r.a.createElement("h2",null,t.markdownRemark.frontmatter.title),r.a.createElement("div",{dangerouslySetInnerHTML:{__html:t.markdownRemark.html}}))}}}]);
-//# sourceMappingURL=component---src-pages-biocv-js-93715f1845b019f08b96.js.map
