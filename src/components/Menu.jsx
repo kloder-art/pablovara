@@ -43,11 +43,13 @@ const Menu = () => {
           </li>
         ))}
         <li className={'separator'}></li>
-        {pages.edges.map(({ node: { frontmatter: { title, slug } } }) => (
-          <li key={slug}>
-            <Link to={`/${slug}`}>{title}</Link>
-          </li>
-        ))}
+        {pages.edges
+          .filter((x) => x.node.frontmatter.slug !== 'home')
+          .map(({ node: { frontmatter: { title, slug } } }) => (
+            <li key={slug}>
+              <Link to={`/${slug}`}>{title}</Link>
+            </li>
+          ))}
       </ul>
     </nav>
   );
