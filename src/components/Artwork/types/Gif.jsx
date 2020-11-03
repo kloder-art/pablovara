@@ -19,8 +19,8 @@ const StyledGif = styled.div`
   }
 `;
 
-const Gif = ({ src, text }) => (
-  <StyledGif>
+const Gif = ({ src, text, onClick }) => (
+  <StyledGif onClick={onClick}>
     <img src={src && src.publicURL ? src.publicURL : null} />
     <div dangerouslySetInnerHTML={{ __html: text }} />
   </StyledGif>
@@ -29,6 +29,7 @@ const Gif = ({ src, text }) => (
 Gif.propTypes = {
   src: PropTypes.object,
   text: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Gif;

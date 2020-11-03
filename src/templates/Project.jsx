@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
@@ -31,25 +31,20 @@ const StyledLayout = styled.div`
   }
 `;
 
+const moveStrip = (ev) => {
+  const d = ev.target.getBoundingClientRect().x - 250;
+  window.scrollBy(d, 0);
+};
+
 const ProjectPage = ({
   data: {
     markdownRemark: { frontmatter, html },
   },
 }) => {
-  const ref = useRef();
-  const moveStrip = (ev) => {
-    const d = ev.currentTarget.getBoundingClientRect() - 250;
-    ref.current.scrollLeft = ref.current.scrollLeft - d;
-    console.log(
-      ref.current.scrollLeft,
-      ev.currentTarget.getBoundingClientRect()
-    );
-    // ref.current
-  };
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <StyledProjectPage ref={ref}>
+      <StyledProjectPage>
         <StyledLayout>
           <Text title={frontmatter.title} html={html} />
           {frontmatter.artwork &&

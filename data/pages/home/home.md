@@ -3,4 +3,4 @@ slug: home
 title: Pablo Vara
 ---
 
-![imagen](home.jpg)
+![figura metro](home.jpg)
