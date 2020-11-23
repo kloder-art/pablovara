@@ -1,9 +1,9 @@
 module.exports = {
-  pathPrefix: '/pablovara',
   siteMetadata: {
     title: 'Pablo Vara',
     description: 'Pablo Vara Artist Portfolio',
     author: '@kloder-art',
+    siteUrl: 'https://pablovara.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -62,20 +62,18 @@ module.exports = {
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
-    // {
-    //   resolve: 'gatsby-plugin-google-analytics',
-    //   options: {
-    //     trackingId: 'UA-165266387-1',
-    //     head: false,
-    //     anonymize: true,
-    //     respectDNT: true,
-    //     sampleRate: 5,
-    //     siteSpeedSampleRate: 10,
-    //     cookieDomain: 'laperifericacc.com',
-    //   },
-    // },
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-88279389-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: 'pablovara.com',
+      },
+    },
   ],
 };
